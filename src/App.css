@@ -36,8 +36,7 @@
 /* Filter component */
 .searchField input[ type = "text" ] {
   font-size: 20px;
-  width: 400px;
-  box-shadow: rgba( 255, 255, 255, .3 ) 0 0 10px 2px;
+  box-shadow: rgba( 200, 200, 200, .3 ) 0 0 10px 2px;
   border: none;
   outline: none;
   padding: 5px;
