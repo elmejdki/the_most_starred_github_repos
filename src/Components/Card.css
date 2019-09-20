@@ -1,0 +1,77 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  box-shadow: rgba( 40, 44, 52, 0.3 ) 0 0 12px 2px;
+  margin: 20px;
+  border-radius: 20px;
+  width: 900px;
+}
+
+.card-img {
+  width: 200px;
+  height: 170px;
+  margin: 0 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 15px;
+}
+
+.card-description {
+  max-width: 600px;
+}
+
+.card-content div {
+  padding: 5px 0;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.card-extras-info {
+  display: flex;
+  align-items: center;
+}
+
+.card-extras-info div {
+  padding: 0 5px;
+}
+
+.card-extras-info .common {
+  box-shadow: rgba( 40, 44, 52, 0.3 ) 0 0 21px 2px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 10px 5px 5px 5px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.card-description a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0f6fec;
+}
+
+.card-description a:hover {
+  color: black;
+}
+
+.submitted {
+  width: 400px;
+}
+
+.stars {
+  background-color: #0072dd;
+}
+
+.issues {
+  background-color: #c40000;
+}

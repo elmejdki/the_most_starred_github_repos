@@ -1,0 +1,33 @@
+.header {
+  background-color: #282c34;
+  text-align: center;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.github-logo {
+  display: block;
+  background: url(img/github-logo.svg);
+  width: 70px;
+  height: 70px;
+  margin: 0 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+}
