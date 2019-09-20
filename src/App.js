@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CardList from './Components/CardList';
+import Filter from './Components/Filter';
 
 class App extends Component {
 	constructor() {
@@ -12,7 +13,8 @@ class App extends Component {
 			link: `https://api.github.com/search/repositories?q=created:>${ 
 				that.getDate( Date.now(), 30 ) }&sort=stars&order=desc`,
 			repos: [],
-			isLoading: false
+			isLoading: false,
+			searchField: ''
 		}
 	}
 
@@ -43,6 +45,10 @@ class App extends Component {
 		})
 	}
 
+	handleFilter = ( event ) => {
+		this.setState({ searchField: event.target.value });
+	}
+
 	componentWillMount() {
 		this.setState({ isLoading: true });
 
@@ -54,18 +60,23 @@ class App extends Component {
 	}
 
 	render() {
-		const { isLoading, repos } = this.state;
+		const { searchField, isLoading, repos } = this.state;
+
+		const filteredRepos = repos.filter(( repo ) => {
+			return repo.owner.login.includes( searchField );
+		});
 
 		return (
 		<div className="container">
 			<div className="header">
-			<div className="title">
-				<span className="github-logo"></span>
-				<h2>The Most Starred Github Repositories</h2>
-			</div>
+				<div className="title">
+					<span className="github-logo"></span>
+					<h2>The Most Starred Github Repositories Created In The Last 30 Days</h2>
+				</div>
+				<Filter handleFilter = { this.handleFilter } />
 			</div>
 			<CardList
-				repos = { repos }
+				repos = { filteredRepos }
 				isLoading = { isLoading }
 				handleScroll = { this.handleScroll } />
 		</div>

@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   color: white;
 }
 
@@ -30,4 +30,16 @@
   flex-direction: column;
   align-items: center;
   min-height: 80vh;
+}
+
+
+/* Filter component */
+.searchField input[ type = "text" ] {
+  font-size: 20px;
+  width: 400px;
+  box-shadow: rgba( 255, 255, 255, .3 ) 0 0 10px 2px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: #535353;
 }
