@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.9.0",
+    "react-bottom-scroll-listener": "^3.0.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.2"
   },
