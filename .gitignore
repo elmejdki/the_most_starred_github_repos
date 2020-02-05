@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+# we need productin for live demo /build
 
 # misc
 .DS_Store
