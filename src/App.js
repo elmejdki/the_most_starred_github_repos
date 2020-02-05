@@ -26,7 +26,7 @@ class App extends Component {
 				d.getMonth() + 1 < 10 ? '0' + 
 				( d.getMonth() + 1 ) : ( d.getMonth() + 1 ) 
 				) +
-			"-" + d.getDate();
+			"-" + ( d.getDate() < 10 ? '0' + d.getDate() : d.getDate() );
 	}
 
 	handleScroll = () => {
@@ -55,6 +55,7 @@ class App extends Component {
 		fetch( this.state.link )
 		.then( response => response.json() )
 		.then( rs => {
+			console.log(rs);
 			this.setState({ repos: rs.items, isLoading: false });
 		})
 	}
