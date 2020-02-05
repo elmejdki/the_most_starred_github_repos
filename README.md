@@ -23,8 +23,13 @@ To get a local copy up and running follow these simple example steps.
 
 To make this repository working in your local machine you need to install at least nodejs so you can have access to the npm, and run this commands on root of the project folder:
 
-> npm install
-> npm run start
+```
+npm install
+```
+
+```
+npm run start
+```
 
 ## Author
 
